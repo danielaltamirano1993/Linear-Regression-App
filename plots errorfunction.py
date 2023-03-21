@@ -21,3 +21,13 @@ def train(n):
     for i in range(0,n): #run(trins from) entire datasaet for each epoch
         for j in range(0,len(points)): #run for each datapoint
             y=a*points[j][0]+b        
+            b=b+error*learningRate #update b
+            errorSum += error**2
+        errorSums.append(errorSum) #makes a list of the errorSum of each EPOCH 
+        numbers.append(i) # list of numbers from 1 to epoch. x-values in error-plot
+        errorSum=0 # reset sum of errors after each epoch
+    drawErrors(numbers,errorSums)
+
+fig = plt.figure() #defines plot area
+train(epochs)
+plt.show()
