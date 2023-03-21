@@ -12,3 +12,12 @@ def drawErrors(m,error):
     #plt.show()
     
 
+def train(n): 
+    errorSums = []
+    errorSum = 0
+    numbers = []
+    a=1
+    b=0
+    for i in range(0,n): #run(trins from) entire datasaet for each epoch
+        for j in range(0,len(points)): #run for each datapoint
+            y=a*points[j][0]+b        
