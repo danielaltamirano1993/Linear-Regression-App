@@ -15,7 +15,20 @@ def plotData():
     plt.axis([0,12,0,30])
     #plt.show()
 
+def drawLine(a,b):
+    x = np.linspace(0,12,100) # 100 linearly spaced numbers
+    y = a*x+b
+    plt.plot(x,y)
+    #plt.show()
     
+    
+def calcError(): #return sum of errors
+    sumError = 0
+    a=1
+    b=0
+#    fig = plt.figure()
+ #   fig.add_axes([0,0,30,12])
+  
     
 
 fig = plt.figure()
