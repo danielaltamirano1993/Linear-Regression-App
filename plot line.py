@@ -30,6 +30,21 @@ def calcError(): #return sum of errors
  #   fig.add_axes([0,0,30,12])
   
     
+    for i in range(0,n):
+        for j in range(0,len(points)):
+            y=a*points[j][0]+b        
+            #print (y)
+            error=points[j][1]-y
+            #print (error)
+            a=a+points[j][0]*error*learningRate
+            b=b+error*learningRate
+            #print('a: ')
+            #print(a)
+            #print ('b: ')
+            #print(b)
+            drawLine(a,b)
+    #plt.show()
+    return(a,b)
 
 fig = plt.figure()
 print(calcError())
