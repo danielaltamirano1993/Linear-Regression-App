@@ -1,2 +1,1 @@
-# Linear-Regression-App
- 
+Linear regression with ML in python
